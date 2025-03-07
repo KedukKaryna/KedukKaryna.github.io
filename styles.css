@@ -1,0 +1,1330 @@
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222222;
+
+}
+
+.titleNaveMenu{
+    color: #FFFFFF;
+    font-weight: 100;
+    font-size: 36px;
+    font-family: 'Prata';
+}
+
+.navMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 49px 211px 94px 126px;
+    gap: 100px;
+    position: relative; 
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+
+.navMenu.sticky {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.556);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.004); 
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerNavMenu{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    cursor: pointer;
+}
+
+
+.furnitureStore{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutShop{
+    display: flex;
+    padding: 0 100px 150px 126px;
+    flex-direction: column;
+}
+
+.checkMark{
+    width: 20px;
+    height: 20px;
+}
+
+
+.titleAboutShop{
+    font-size: 80px;
+    flex-wrap: wrap;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    font-family: 'Prata';
+}
+
+.paragrapAboutShop{
+    font-size: 50px;
+    color: #FFFFFF;
+    padding-bottom: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column; 
+    gap: 37.5px; 
+    padding-bottom: 40px;
+}
+
+.offer-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+}
+
+.offer-item p {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-number {
+    font-size: 40px; 
+    font-weight: bold; 
+    font-family: 'Prata';
+    color: #FFFFFF; 
+}
+
+.orderAboutShop{
+    width: 191px;
+    height: 96px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+
+}
+
+
+
+.mainContainre {
+    display: flex;
+    justify-content: space-between;
+    background-color: #282829;
+    padding-top: 100px;
+    align-items: stretch; 
+}
+
+.mainImg {
+    width: 33.3%;
+    height: auto; 
+    object-fit: cover; 
+    flex-grow: 1;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; 
+    align-items: center;
+}
+
+
+.description {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    margin-bottom: 60px;
+    border-top: 1px solid #55565A;
+    padding-top: 50px; 
+
+}
+
+.description:first-child {
+    border-top: none; 
+}
+
+.description img {
+    width: 58px;
+    height: 47px;
+}
+
+.description p {
+    color: white;
+    font-size: 24px;
+    max-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contentContainer button{
+    height: 78px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+
+
+
+.contactFormContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #282829;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+.containerForm {
+    display: flex;
+    width: 80%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px;
+    padding-left: 134px;
+    padding-right: 100px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 72.5px;
+    margin-bottom: 45px;
+    font-size: 54px;
+    font-family: 'Prata';
+    color: #38535D;
+}
+
+input {
+    padding: 14.5px 0 14.5px 38.1px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #222222;
+}
+
+.privacyPolicy {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+    padding:26px 0;
+}
+
+.inputForm button {
+    padding: 32px;
+    font-size: 24px;
+    background-color: #282829;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 71.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #b46600;
+}
+
+.formImage {
+    width: 40%; 
+}
+
+.formImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+footer{
+    background-color: #222222;
+    color: #FFFFFF;
+    border-top: 1px solid #55565A; 
+}
+
+.footerLink{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.footerContainerSocial{
+    border-top: 1px solid #55565A; 
+
+}
+
+.footerContainerSocial{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 64px;
+}
+
+.footerContainerSocial h3{
+    font-weight: 100;
+    font-size: 36px;
+    font-family: 'Prata';
+    margin-top: -10px; 
+}
+
+.social {
+    display: flex;  
+    gap: 32px; 
+
+}
+
+.footerContainerSocial button{
+    width: 180px;
+    height: 78px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    align-self: center; 
+    margin-top: -20px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footerContainerCopy{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 54px;
+    padding-bottom: 53px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media (max-width: 1440px) {
+    .navMenu {
+        padding: 40px 150px 80px 100px;
+        gap: 80px;
+    }
+
+    .contentContainer{
+        align-items: center;
+    }
+
+    .aboutShop {
+        padding: 0 80px 120px 100px;
+    }
+
+    .mainContainre {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navMenu {
+        padding: 30px 80px;
+        gap: 50px;
+    }
+
+    .containerNavMenu {
+        gap: 20px;
+    }
+
+    .aboutShop {
+        padding: 0 50px 100px 80px;
+    }
+
+    .titleAboutShop {
+        font-size: 60px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 40px;
+    }
+
+    .offer-item p {
+        font-size: 20px;
+    }
+
+    .mainContainre {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .mainImg {
+        width: 90%;
+        height: auto;
+    }
+
+    .contentContainer {
+        width: 90%;
+        text-align: center;
+    }
+
+    .description {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footerContainerSocial button{
+        margin-top: 10px;
+    }
+
+    .contentContainer button{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navMenu {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .containerNavMenu {
+        align-items: center;
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .aboutShop {
+        padding: 0 30px 60px 30px;
+        text-align: center;
+    }
+
+    .titleNaveMenu{
+        font-size: 26px;
+    }
+
+    .titleAboutShop {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .paragrapAboutShop {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .big-number{
+        font-size: 30px;
+    }
+
+    .offer {
+        align-items: start;
+    }
+
+    .offer-item{
+        gap: 10px;
+        text-align: left;
+    }
+
+    .offer-item p{
+        font-size: 20px;
+        gap: 5px;
+    }
+
+    .orderAboutShop {
+        width: 160px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .contactFormContainer {
+        padding: 50px;
+    }
+
+    .containerForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .formContent {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .formImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footerLink {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footerContainerCopy {
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navMenu {
+        padding: 20px;
+    }
+
+    .containerNavMenu{
+         flex-direction: column;
+        font-size: 8px;
+    }
+
+    .titleNaveMenu {
+        font-size: 20px;
+    }
+
+    .aboutShop {
+        padding: 0 20px 50px 20px;
+    }
+
+    .titleAboutShop {
+        font-size: 30px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 24px;
+    }
+
+    .description p{
+        font-size: 15px;
+    }
+
+    .mainImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .contactFormContainer {
+        padding: 30px;
+    }
+
+    .containerForm {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footerLink {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footerContainerCopy {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    h2{
+        font-size: 44px;
+    }
+
+    .inputForm input{
+        font-size: 15px;
+    }
+
+    .inputForm button{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .titleNaveMenu {
+        font-size: 20px;
+    }
+    .containerNavMenu{
+        flex-direction: column;
+       font-size: 5px;
+   }
+    .aboutShop {
+        padding: 0 15px 40px 15px;
+    }
+
+    .titleAboutShop {
+        font-size: 20px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 15px;
+    }
+
+    .offer-item p {
+        font-size: 16px;
+    }
+
+    .orderAboutShop {
+        width: 140px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .mainContainre {
+        padding-top: 30px;
+    }
+
+    .mainImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .contentContainer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .description img {
+        width: 40px;
+        height: auto;
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+
+    .contactFormContainer {
+        padding: 20px;
+    }
+
+    .containerForm {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .footerLink {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .social{
+        gap: 5px;
+    }
+
+    .footerContainerCopy {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222222;
+}
+
+.titleNaveMenu, .footerContainerSocial h3 {
+    color: #FFFFFF;
+    font-weight: 100;
+    font-size: 36px;
+    font-family: 'Prata';
+}
+
+.navMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 49px 211px 94px 126px;
+    gap: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navMenu.sticky {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.556);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.004);
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerNavMenu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.furnitureStore {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutShop {
+    display: flex;
+    padding: 0 100px 150px 126px;
+    flex-direction: column;
+}
+
+.checkMark {
+    width: 20px;
+    height: 20px;
+}
+
+.titleAboutShop {
+    font-size: 80px;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    font-family: 'Prata';
+}
+
+.paragrapAboutShop {
+    font-size: 50px;
+    color: #FFFFFF;
+    padding-bottom: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    gap: 37.5px;
+    padding-bottom: 40px;
+}
+
+.offer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-item p {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-number {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Prata';
+    color: #FFFFFF;
+}
+
+.orderAboutShop {
+    width: 191px;
+    height: 96px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+}
+
+.mainContainre {
+    display: flex;
+    justify-content: space-between;
+    background-color: #282829;
+    padding-top: 100px;
+    align-items: stretch;
+}
+
+.mainImg {
+    width: 33.3%;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    border-top: 1px solid #55565A;
+    padding-top: 50px;
+}
+
+.description:first-child {
+    border-top: none;
+}
+
+.description img {
+    width: 58px;
+    height: 47px;
+}
+
+.description p {
+    color: white;
+    font-size: 24px;
+    max-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contentContainer button {
+    height: 78px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+    width: 80%;
+}
+
+.contactFormContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #282829;
+    padding: 100px 0;
+}
+
+.containerForm {
+    display: flex;
+    width: 80%;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px 134px 20px 100px;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 72.5px 0 45px;
+    font-size: 54px;
+    font-family: 'Prata';
+    color: #38535D;
+}
+
+input {
+    padding: 14.5px 0 14.5px 38.1px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #222222;
+}
+
+.privacyPolicy {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #555;
+    padding: 26px 0;
+}
+
+.inputForm button {
+    padding: 32px;
+    font-size: 24px;
+    background-color: #282829;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 71.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #b46600;
+}
+
+.formImage {
+    width: 40%;
+}
+
+.formImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #222222;
+    color: #FFFFFF;
+    border-top: 1px solid #55565A;
+}
+
+.footerLink {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 0;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.footerContainerSocial {
+    border-top: 1px solid #55565A;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 64px;
+}
+
+.social {
+    display: flex;
+    gap: 32px;
+}
+
+.footerContainerSocial button {
+    width: 180px;
+    height: 78px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    align-self: center;
+    margin-top: -20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footerContainerCopy {
+    display: flex;
+    justify-content: space-around;
+    padding: 54px 0 53px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 1440px) {
+    .navMenu {
+        padding: 40px 150px 80px 100px;
+        gap: 80px;
+    }
+
+    .aboutShop {
+        padding: 0 80px 120px 100px;
+    }
+
+    .mainContainre {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navMenu {
+        padding: 30px 80px;
+        gap: 50px;
+    }
+
+    .containerNavMenu {
+        gap: 20px;
+    }
+
+    .aboutShop {
+        padding: 0 50px 100px 80px;
+    }
+
+    .titleAboutShop {
+        font-size: 60px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 40px;
+    }
+
+    .offer-item p {
+        font-size: 20px;
+    }
+
+    .mainContainre {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .mainImg {
+        width: 90%;
+    }
+
+    .contentContainer {
+        width: 90%;
+        text-align: center;
+    }
+
+    .description {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footerContainerSocial button {
+        margin-top: 10px;
+    }
+
+    .contentContainer button {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navMenu {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .containerNavMenu {
+        align-items: center;
+        gap: 8px;
+        font-size: 10px;
+    }
+
+    .aboutShop {
+        padding: 0 30px 60px 30px;
+        text-align: center;
+    }
+
+    .titleNaveMenu {
+        font-size: 26px;
+    }
+
+    .titleAboutShop {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .paragrapAboutShop {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .big-number {
+        font-size: 30px;
+    }
+
+    .offer {
+        align-items: start;
+    }
+
+    .offer-item {
+        gap: 10px;
+        text-align: left;
+    }
+
+    .offer-item p {
+        font-size: 20px;
+    }
+
+    .orderAboutShop {
+        width: 160px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .contactFormContainer {
+        padding: 50px;
+    }
+
+    .containerForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .formContent {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .formImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footerLink {
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footerContainerCopy {
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navMenu {
+        padding: 20px;
+    }
+
+    .containerNavMenu {
+        flex-direction: column;
+        font-size: 8px;
+    }
+
+    .titleNaveMenu {
+        font-size: 20px;
+    }
+
+    .aboutShop {
+        padding: 0 20px 50px 20px;
+    }
+
+    .titleAboutShop {
+        font-size: 30px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 24px;
+    }
+
+    .description p {
+        font-size: 15px;
+    }
+
+    .mainImg {
+        width: 100%;
+    }
+
+    .contactFormContainer {
+        padding: 30px;
+    }
+
+    .containerForm {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footerLink {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footerContainerCopy {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    .inputForm input {
+        font-size: 15px;
+    }
+
+    .inputForm button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .titleNaveMenu {
+        font-size: 20px;
+    }
+
+    .containerNavMenu {
+        flex-direction: column;
+        font-size: 5px;
+    }
+
+    .aboutShop {
+        padding: 0 15px 40px 15px;
+    }
+
+    .titleAboutShop {
+        font-size: 20px;
+    }
+
+    .paragrapAboutShop {
+        font-size: 15px;
+    }
+
+    .offer-item p {
+        font-size: 16px;
+    }
+
+    .orderAboutShop {
+        width: 140px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .mainContainre {
+        padding-top: 30px;
+    }
+
+    .mainImg {
+        width: 100%;
+    }
+
+    .contentContainer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .description img {
+        width: 40px;
+    }
+
+    .description p {
+        font-size: 18px;
+    }
+
+    .contactFormContainer {
+        padding: 20px;
+    }
+
+    .containerForm {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .footerLink {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footerContainerSocial {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .social {
+        gap: 5px;
+    }
+
+    .footerContainerCopy {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
